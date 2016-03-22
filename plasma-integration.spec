@@ -25,7 +25,9 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5X11Tests)
 BuildRequires: pkgconfig(Qt5X11Qml)
 BuildRequires: pkgconfig(x11)
-Requires: qt5-qtquickcontrols >= 5.5.0
+Requires: oxygen-fonts
+# (tpg) Noto fonts needs to be packaged
+#Requires: noto
 
 %description
 Framework Integration is a set of plugins responsible
