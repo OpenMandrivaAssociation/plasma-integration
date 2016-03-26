@@ -46,7 +46,7 @@ on a KDE Plasma workspace.
 %install
 %ninja_install -C build
 
-%find_lang plasmaintegraion5
+%find_lang plasmaintegration5
 
 %files -f plasmaintegration5.lang
 %doc README.md
