@@ -50,3 +50,4 @@ on a KDE Plasma workspace.
 
 %files -f plasmaintegration5.lang
 %doc README.md
+%{_libdir}/qt5/plugins/platformthemes/KDEPlasmaPlatformTheme.so
