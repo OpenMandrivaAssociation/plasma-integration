@@ -25,6 +25,7 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: pkgconfig(x11)
+BuildRequires: pkgconfig(xcursor)
 Requires: oxygen-fonts
 # (tpg) Noto fonts needs to be packaged
 #Requires: noto
