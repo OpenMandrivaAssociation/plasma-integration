@@ -3,7 +3,7 @@
 
 Summary: Qt integration framework with Plasma
 Name: plasma-integration
-Version: 5.6.5
+Version: 5.7.0
 Release: 1
 Source0: http://download.kde.org//%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 URL: http://kde.org/
@@ -46,7 +46,7 @@ on a KDE Plasma workspace.
 %install
 %ninja_install -C build
 
-%find_lang plasmaintegration5
+%find_lang plasmaintegration5 || touch plasmaintegration5.lang
 
 %files -f plasmaintegration5.lang
 %doc README.md
