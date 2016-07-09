@@ -10,6 +10,7 @@ URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
+BuildRequires: cmake(Breeze)
 BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5Wayland)
 BuildRequires: cmake(KF5Notifications)
