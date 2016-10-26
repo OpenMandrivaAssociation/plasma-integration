@@ -28,8 +28,7 @@ BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
 Requires: oxygen-fonts
-# (tpg) Noto fonts needs to be packaged
-#Requires: noto
+Requires: noto-sans-fonts
 
 %description
 Framework Integration is a set of plugins responsible
@@ -52,3 +51,4 @@ on a KDE Plasma workspace.
 %files -f plasmaintegration5.lang
 %doc README.md
 %{_libdir}/qt5/plugins/platformthemes/KDEPlasmaPlatformTheme.so
+%{_datadir}/kconf_update/*.upd
