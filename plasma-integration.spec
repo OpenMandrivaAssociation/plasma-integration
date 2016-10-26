@@ -52,3 +52,4 @@ on a KDE Plasma workspace.
 %doc README.md
 %{_libdir}/qt5/plugins/platformthemes/KDEPlasmaPlatformTheme.so
 %{_datadir}/kconf_update/*.upd
+%{_datadir}/kconf_update/*.pl
