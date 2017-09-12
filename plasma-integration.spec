@@ -28,6 +28,7 @@ BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: %mklibname -d -s qt5themesupport
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
+BuildRequires: noto-sans-fonts
 Requires: oxygen-fonts
 Requires: noto-sans-fonts
 
