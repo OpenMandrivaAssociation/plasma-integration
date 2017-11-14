@@ -25,6 +25,7 @@ BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(Qt5Qml)
+BuildRequires: pkgconfig(Qt5QuickControls2)
 BuildRequires: %mklibname -d -s qt5themesupport
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
