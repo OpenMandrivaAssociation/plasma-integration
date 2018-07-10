@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   plasma-integration-5.12.3.tar.xz: c737fd21bef76ff248261de2111b8ff37fd11418
+sources:
+  plasma-integration-5.12.6.tar.xz: 4294a0171ce748f553e639053c761ef0b52d246b
