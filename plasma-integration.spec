@@ -10,8 +10,8 @@
 
 Summary: Qt integration framework with Plasma
 Name: plasma-integration
-Version: 5.15.3
-Release: 2
+Version: 5.15.4
+Release: 1
 Source0: http://download.kde.org//%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 URL: http://kde.org/
 License: GPL
