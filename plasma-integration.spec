@@ -1,10 +1,3 @@
-%ifarch %{aarch64}
-# Workaround for build failure with clang 7.0.1
-# https://abf.openmandriva.org/build_lists/357980
-%define __cc %{_bindir}/gcc
-%define __cxx %{_bindir}/g++
-%endif
-
 %define plasmaver %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
