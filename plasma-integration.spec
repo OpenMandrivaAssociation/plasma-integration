@@ -3,7 +3,7 @@
 
 Summary: Qt integration framework with Plasma
 Name: plasma-integration
-Version:	5.21.5
+Version:	5.22.0
 Release: 1
 Source0: http://download.kde.org//%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Patch0: plasma-integration-5.17.5-allow-configuring-button-order.patch
@@ -40,6 +40,14 @@ Framework Integration is a set of plugins responsible
 for better integration of Qt applications when running
 on a KDE Plasma workspace.
 
+%package devel
+Summary: Development files for plasma-key-data
+Group: Development/C++ and C
+Requires: %{name} = %{EVRD}
+
+%description devel
+Development files for plasma-key-data
+
 %prep
 %autosetup -p1
 %cmake_kde5
@@ -57,3 +65,8 @@ on a KDE Plasma workspace.
 %{_libdir}/qt5/plugins/platformthemes/KDEPlasmaPlatformTheme.so
 %{_datadir}/kconf_update/*.upd
 %{_datadir}/kconf_update/*.pl
+%{_libdir}/qt5/plugins/platforminputcontexts/plasmaimplatforminputcontextplugin.so
+
+%files devel
+%{_includedir}/PlasmaKeyData
+%{_libdir}/pkgconfig/plasma-key-data.pc
