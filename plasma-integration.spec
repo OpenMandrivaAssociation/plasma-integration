@@ -3,7 +3,7 @@
 
 Summary: Qt integration framework with Plasma
 Name: plasma-integration
-Version:	5.22.90
+Version: 5.22.90
 Release: 1
 Source0: http://download.kde.org//%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Patch0: plasma-integration-5.17.5-allow-configuring-button-order.patch
@@ -32,7 +32,6 @@ BuildRequires: %mklibname -d -s qt5themesupport
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: noto-sans-fonts
-Requires: oxygen-fonts
 Requires: noto-sans-fonts
 
 %description
