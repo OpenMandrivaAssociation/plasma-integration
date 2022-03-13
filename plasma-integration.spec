@@ -33,6 +33,7 @@ BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: noto-sans-fonts
 Requires: noto-sans-fonts
+Requires: breeze
 
 %description
 Framework Integration is a set of plugins responsible
@@ -45,7 +46,7 @@ Group: Development/C++ and C
 Requires: %{name} = %{EVRD}
 
 %description devel
-Development files for plasma-key-data
+Development files for plasma-key-data.
 
 %prep
 %autosetup -p1
