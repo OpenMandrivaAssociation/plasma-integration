@@ -32,6 +32,7 @@ BuildRequires: %mklibname -d -s qt5themesupport
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: pkgconfig(wayland-client)
+BuildRequires: cmake(PlasmaWaylandProtocols)
 BuildRequires: noto-sans-fonts
 Requires: noto-sans-fonts
 Requires: breeze
