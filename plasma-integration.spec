@@ -31,6 +31,7 @@ BuildRequires: pkgconfig(Qt5QuickControls2)
 BuildRequires: %mklibname -d -s qt5themesupport
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
+BuildRequires: pkgconfig(wayland-client)
 BuildRequires: noto-sans-fonts
 Requires: noto-sans-fonts
 Requires: breeze
