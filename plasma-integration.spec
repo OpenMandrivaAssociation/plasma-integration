@@ -3,7 +3,7 @@
 
 Summary: Qt integration framework with Plasma
 Name: plasma-integration
-Version: 5.25.90
+Version: 5.26.0
 Release: 1
 Source0: http://download.kde.org//%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Patch0: plasma-integration-5.17.5-allow-configuring-button-order.patch
