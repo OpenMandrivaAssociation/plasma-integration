@@ -7,7 +7,7 @@ Version: 5.27.11
 Release: 3
 Source0: http://download.kde.org//%{stable}/plasma/%{plasmaver}/%{name}-%{version}.tar.xz
 Patch0: plasma-integration-5.17.5-allow-configuring-button-order.patch
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
