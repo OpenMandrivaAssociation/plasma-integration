@@ -5,9 +5,9 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary: Qt integration framework with Plasma
-Name: plasma6-integration
+Name: plasma-integration
 Version: 6.3.4
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}3
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/plasma-integration/-/archive/%{gitbranch}/plasma-integration-%{gitbranchd}.tar.bz2#/plasma-integration-%{git}.tar.bz2
 %else
@@ -38,6 +38,23 @@ BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6Qml)
 BuildRequires: cmake(Qt6Quick)
 BuildRequires: cmake(Qt6QuickControls2)
+BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5Widgets)
+BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: pkgconfig(Qt5X11Extras)
+BuildRequires: pkgconfig(Qt5Test)
+BuildRequires: pkgconfig(Qt5Qml)
+BuildRequires: pkgconfig(Qt5QuickControls2)
+BuildRequires: %mklibname -d -s qt5themesupport
+BuildRequires: cmake(KF5WidgetsAddons)
+BuildRequires: cmake(KF5Wayland)
+BuildRequires: cmake(KF5Notifications)
+BuildRequires: cmake(KF5KIO)
+BuildRequires: cmake(KF5IconThemes)
+BuildRequires: cmake(KF5I18n)
+BuildRequires: cmake(KF5ConfigWidgets)
+BuildRequires: cmake(KF5Config)
+BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(xcursor)
 BuildRequires: pkgconfig(xkbcommon)
@@ -45,40 +62,34 @@ BuildRequires: pkgconfig(wayland-client)
 BuildRequires: cmake(PlasmaWaylandProtocols)
 BuildRequires: noto-sans-fonts
 Requires: noto-sans-fonts
-Requires: plasma6-breeze
+Requires: breeze
+# Renamed after 6.0 2025-05-03
+%rename plasma6-integration
+# This package was empty even before
+Obsoletes: plasma6-integration-devel < %{EVRD}
+Obsoletes: plasma-integration-devel < %{EVRD}
+Recommends: (%{name}-qt5 if %mklibname qt5gui5)
+
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
+BuildOption:	-DBUILD_QT5:BOOL=ON
+BuildOption:	-DBUILD_QT6:BOOL=ON
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Framework Integration is a set of plugins responsible
 for better integration of Qt applications when running
 on a KDE Plasma workspace.
 
-%package devel
-Summary: Development files for plasma-key-data
-Group: Development/C++ and C
-Requires: %{name} = %{EVRD}
+%package qt5
+Summary:	Plasma integration for Qt 5.x applications
+Group: 		System/Libraries
 
-%description devel
-Development files for plasma-key-data.
+%description qt5
+Plasma integration for Qt 5.x applications
 
-%prep
-%autosetup -p1 -n plasma-integration-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_QT5:BOOL=OFF \
-	-DBUILD_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang plasmaintegration5 || touch plasmaintegration5.lang
-
-%files -f plasmaintegration5.lang
-%doc README.md
+%files -f %{name}.lang
 %{_qtdir}/plugins/platformthemes/KDEPlasmaPlatformTheme6.so
 
-%files devel
+%files qt5
+%{_libdir}/qt5/plugins/platformthemes/KDEPlasmaPlatformTheme5.so
