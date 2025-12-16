@@ -38,6 +38,7 @@ BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6Qml)
 BuildRequires: cmake(Qt6Quick)
 BuildRequires: cmake(Qt6QuickControls2)
+BuildRequires: qmake5
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5DBus)
